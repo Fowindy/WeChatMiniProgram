@@ -1,3 +1,18 @@
 .info {
    font-weight:bold;                 font-size:30px;
 }
+.container{
+  /* 首先为view元素添加一个临时的背景色 */
+  background-color: #eee;
+  /* 希望页面的高度等同于页面可见区域的高度 */
+  /* 100vh等价于页面是适可高度的100% */
+  height: 100vh;
+  /* 将view元素里面的所有元素进行居中显示 */
+  text-align: center
+}
+text{
+  /* 将所有的text元素进行按块分布 */
+  display: block;
+  margin-bottom: 60px;
+}
+
