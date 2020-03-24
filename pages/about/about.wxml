@@ -3,7 +3,11 @@
   <image src="/images/timg.jpg" class="about-banner"></image>
   <!-- 使用rpx像素单独设置字体大小 -->
   <text style="font-weight:bold;font-size:60rpx;">电影周周看</text>
-  <text>我每周推荐一部好电影</text>
+  <view>
+    <text>我</text>
+    <navigator class="nav-default" hover-class="nav-hover" open-type="redirect" style="display:inline;" url="/pages/weekly/weekly">每周推荐</navigator>
+    <text>一部好电影</text>
+  </view>
   <text>我的邮箱:fowindy@outlook.com</text>
 </view>
 <!--09.微信小程序快速实现基本布局
@@ -19,3 +23,36 @@
                           1.每个元素独占一行,自上而下放置
                           2.自上而下放置时素材均匀分布
                           3.每一个元素在水平方向集中显示-->
+
+<!-- 首先将每周推荐包装在navigator元素中
+<text>我<navigator>每周推荐</navigator>一部好电影</text>
+再加超链接的url
+<text>我<navigator url = 'pages/weekly/weekly'>每周推荐</navigator>一部好电影</text>
+在wxml中text的内容只能是成文本,包含其它元素都会被忽略掉;因此将文本分开
+    <text>我</text>
+    <navigator url='/pages/weekly/weekly'>每周推荐</navigator>
+    <text>一部好电影</text>
+
+将这三部分封装到一起，
+  <view>
+    <text>我</text>
+    <navigator url='/pages/weekly/weekly'>每周推荐</navigator>
+    <text>一部好电影</text>
+  </view>
+
+还是不能显示在一行，是因为navigator默认是一个block元素,需要设置成inline元素
+  <view>
+    <text>我</text>
+    <navigator style="display:inline;" url='/pages/weekly/weekly'>每周推荐</navigator>
+    <text>一部好电影</text>
+  </view>
+
+如果不允许返回，
+  <view>
+    <text>我</text>
+    <navigator open-type="redirect" style="display:inline;" url="/pages/weekly/weekly">每周推荐</navigator>
+    <text>一部好电影</text>
+  </view>
+说明:
+open-type="redirect" 不返回
+open-type="navigate"返回,默认不写也是返回 -->

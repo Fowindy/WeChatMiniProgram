@@ -18,3 +18,11 @@
   /* 将图片设置成圆形图片 */
   border-radius: 50%
 }
+/* 需要出现点击态的状态:
+则需要将点击态的样式规则放在默认态之后 */
+.nav-default{
+  color: blue;
+}
+.nav-hover{
+  color: red;
+}
