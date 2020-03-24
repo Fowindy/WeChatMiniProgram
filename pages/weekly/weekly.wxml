@@ -7,7 +7,9 @@
   <!-- <text>{{count + score}}</text> -->
   <!-- 条件表达式 -->
   <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
-  <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>   
+  <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+  <!-- 使用hidden属性渲染 -->
+  <text hidden="{{!thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>   
 </view>
 <!-- 3.2小程序运行环境和基本架构
         运行环境:
@@ -35,6 +37,15 @@
         强烈推荐这个text的元素,
         它的渲染生成的条件是:绑定到了thisWeekMovieIsHighlyRecommended属性上
         thisWeekMovie.isHighlyRecommended为true时,生成红色"强烈推荐"
-        thisWeekMovie.isHighlyRecommended为false时,不生成-->
+        thisWeekMovie.isHighlyRecommended为false时,不生成
+
+        使用条件渲染与使用hidden属性有什么区别？
+        需要对控制语句进行求反,因为当前紧张博主对这个电影是强烈推荐的时候，我们是要显示出强烈推荐这个标志，而不是隐藏，
+        语法上:使用hidden属性时，这个元素总是要先被渲染生成的，hidden属性只是控制了其可见性而已，
+        使用上的选择:对于可见性需要频繁切换的时候，我们就不建议使用条件渲染，推荐使用hidden
+        对于hidden而言，即使用户得到了数据里面博主没有强烈推荐这个电影，那么他也会在初始生成的时候去生成这么一个元素，
+        hidden初始化开销会大一些
+
+-->
 
 
