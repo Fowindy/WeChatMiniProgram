@@ -20,3 +20,8 @@
         
         about页和weekly页,都内置了一个webviewId的内部状态变量，来记
         录他们各自是在几号webview进程之中进行渲染的-->
+
+<!-- 3.3条件渲染
+        条件渲染，条件成立时组建才渲染生成
+        wx:if
+        wx:if VS hidden -->
