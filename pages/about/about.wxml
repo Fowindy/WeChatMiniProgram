@@ -5,11 +5,12 @@
   <text style="font-weight:bold;font-size:60rpx;">电影周周看</text>
   <view>
     <text>我</text>
-    <navigator class="nav-default" hover-class="nav-hover" open-type="redirect" style="display:inline;" url="/pages/weekly/weekly">每周推荐</navigator>
+    <navigator class="nav-default" hover-class="nav-hover" open-type="switchTab" style="display:inline;" url="/pages/weekly/weekly">每周推荐</navigator>
     <text>一部好电影</text>
   </view>
   <text>我的邮箱:fowindy@outlook.com</text>
 </view>
+<!-- open-type="switchTab" 切换按钮 -->
 <!--09.微信小程序快速实现基本布局
     一个简单的布局需求:
                     1.从上到下
