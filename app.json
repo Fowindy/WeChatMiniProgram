@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/weekly/weekly"
+    ,
     "pages/about/about"
   ],
   "sitemapLocation": "sitemap.json"

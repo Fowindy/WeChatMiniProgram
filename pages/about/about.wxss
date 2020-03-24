@@ -2,23 +2,6 @@
    font-weight:bold;                 
    font-size:30px;
 }
-.container{
-  /* 首先为view元素添加一个临时的背景色 */
-  background-color: #eee;
-  /* 希望页面的高度等同于页面可见区域的高度 */
-  /* 100vh等价于页面是适可高度的100% */
-  height: 100vh;
-  /* 将view元素里面的所有元素进行居中显示 */
-  /* text-align: center; */
-  /* 09_02_弹性盒子布局的实现: */
-  display: flex;
-  /* 从上往下放置 */
-  flex-direction: column;
-  /* 所有页面元素均匀分布 */
-  justify-content: space-around;
-  /* 所有元素剧中显示 */
-  align-items: center;
-}
 /* 弹性合资布局的优点:
     1.相关的wxss属性赋值比较统一
     2.方式灵活，能够应对一些页面结构的变化
