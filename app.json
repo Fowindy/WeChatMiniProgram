@@ -26,9 +26,7 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true,
-    "navigationBarTitleText": "小程序",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light"
+    "navigationBarTitleText": "小程序"
   },
   "sitemapLocation": "sitemap.json"
 }
