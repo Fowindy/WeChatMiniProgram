@@ -4,9 +4,10 @@
   <image src="{{thisWeekMovie.imagePath}}"></image>
   <text>{{thisWeekMovie.name}}</text>
   <text>点评:{{thisWeekMovie.comment}}</text>
-  <text>{{count + score}}</text>
+  <!-- <text>{{count + score}}</text> -->
   <!-- 条件表达式 -->
-  <text>{{(score>=60)?"及格":"不及格"}}</text>
+  <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+  <text style="font-size:16px;color:red;">强烈推荐</text>   
 </view>
 <!-- 3.2小程序运行环境和基本架构
         运行环境:
@@ -24,4 +25,11 @@
 <!-- 3.3条件渲染
         条件渲染，条件成立时组建才渲染生成
         wx:if
-        wx:if VS hidden -->
+        wx:if VS hidden 
+        
+        需求:在视图中，对于那些博主强烈推荐的电影，我们要显示一个强烈推荐的红色的标记
+        思路:首先我们把强烈推荐的这个元素给它定义出来，
+        1.在weekly.js中添加isHighlyRecommended:true字段,用于表示是否为博主强力推荐
+        2.在weekly.wxml中加入"强烈推荐"的text元素-->
+
+
