@@ -32,7 +32,8 @@
         1.在weekly.js中添加isHighlyRecommended:true字段,用于表示是否为博主强力推荐
         2.在weekly.wxml中加入"强烈推荐"的text元素
         
-        强烈推荐这个text的元素,它的渲染生成的条件是:绑定到了thisWeekMovieIsHighlyRecommended属性上
+        强烈推荐这个text的元素,
+        它的渲染生成的条件是:绑定到了thisWeekMovieIsHighlyRecommended属性上
         thisWeekMovie.isHighlyRecommended为true时,生成红色"强烈推荐"
         thisWeekMovie.isHighlyRecommended为false时,不生成-->
 
