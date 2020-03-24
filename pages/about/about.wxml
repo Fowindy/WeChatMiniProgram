@@ -1,9 +1,10 @@
-<!-- <text class = "info">Hello World</text> -->
+<!-- <text class = "info" id="zbc" style="" bindtap = "f0" hidden="false" data-user-name="user">Hello World</text> -->
 <view class="container">
-<image src="/images/timg.jpg"></image>
-<text>电影周周看</text>
-<text>我每周推荐一部好电影</text>
-<text>我的邮箱:fowindy@outlook.com</text>
+  <image src="/images/timg.jpg" class="about-banner"></image>
+  <!-- 单独将电影周周看字体加粗,使用像素大小单位 -->
+  <text style="font-weight:bold;font-size:60rpx;">电影周周看</text>
+  <text>我每周推荐一部好电影</text>
+  <text>我的邮箱:fowindy@outlook.com</text>
 </view>
 <!--09.微信小程序快速实现基本布局
     一个简单的布局需求：
