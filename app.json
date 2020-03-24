@@ -22,5 +22,13 @@
     "color": "#000",
     "selectedColor": "#008000"
   },
+  "window": {
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+  },
   "sitemapLocation": "sitemap.json"
 }

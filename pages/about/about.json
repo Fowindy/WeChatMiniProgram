@@ -1,6 +1,3 @@
 {
-  "navigationBarTitleText": "关于",
-  "navigationBarBackgroundColor": "#fff",
-  "navigationBarTextStyle": "black",
-  "enablePullDownRefresh": true
+  "navigationBarTitleText": "关于"
 }
