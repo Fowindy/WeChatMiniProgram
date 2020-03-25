@@ -15,3 +15,7 @@
     /* 设置到页面高度的90% */
     height: 90vh;
 }
+.movie-card{
+    height: 100%;
+    width: 100%;
+}
