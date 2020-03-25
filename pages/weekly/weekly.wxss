@@ -11,3 +11,7 @@
     width: 200rpx;
     height: 200rpx;
 }
+.movie-swiper{
+    /* 设置到页面高度的90% */
+    height: 90vh;
+}

@@ -27,7 +27,8 @@
 <view class="">
         <!-- <text>本周推荐</text> -->
         <!-- 显示swiper的面板指示 -->
-        <swiper indicator-dots='{{true}}'>
+        <!-- 增大每一页幻灯片的空间 -->
+        <swiper class="movie-swiper" indicator-dots='{{true}}'>
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
                         <image class="movie-image" src="{{item.imagePath}}"></image>
                         <view class="movie-detail">
