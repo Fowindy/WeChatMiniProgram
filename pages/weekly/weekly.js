@@ -31,6 +31,25 @@ Page({
     this.setData({
       currentIndex:this.data.weeklyMovieList.length-1
     })
+  },
+  /**
+   * 5.附注:介绍其它几个生命周期函数的使用
+   * onShow方法:当页面每一次显示的时候都会调用一次(每次页面从隐藏到显示状态都会被调用)
+   * onReady方法:当页面初始渲染完成后调用
+   * onHide方法:当页面每次隐藏的时候调用一次
+   * onUnload方法:当页面被关闭或卸载的时候被调用
+   */
+  onShow:function(){
+
+  },
+  onReady:function(){
+
+  },
+  onHide:function(){
+
+  },
+  onUnload:function(){
+
   }
 })
 /**假如博主三周推荐的是这三部电影， */
