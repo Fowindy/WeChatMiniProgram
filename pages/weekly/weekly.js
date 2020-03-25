@@ -34,6 +34,12 @@ Page({
       currentIndex:this.data.weeklyMovieList.length-1
     })
   },
+  //返回每周触发事件函数f0完成
+  f0:function(event) {
+    this.setData({
+      currentIndex:this.data.weeklyMovieList.length-1
+    })
+  },
   /**
    * 5.附注:介绍其它几个生命周期函数的使用
    * onShow方法:当页面每一次显示的时候都会调用一次(每次页面从隐藏到显示状态都会被调用)
@@ -41,18 +47,18 @@ Page({
    * onHide方法:当页面每次隐藏的时候调用一次
    * onUnload方法:当页面被关闭或卸载的时候被调用
    */
-  onShow:function(){
+  // onShow:function(){
 
-  },
-  onReady:function(){
+  // },
+  // onReady:function(){
 
-  },
-  onHide:function(){
+  // },
+  // onHide:function(){
 
-  },
-  onUnload:function(){
+  // },
+  // onUnload:function(){
 
-  },
+  // },
   /**
    * 2.新增实例代码f1的定义,读取内部状态变量值没有问题
    * 
