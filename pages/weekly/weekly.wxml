@@ -9,13 +9,16 @@
         第一种方式:手动增加，不推荐，
         第2种方法，在试图层提供循环的控制结构，
  -->
+ <!-- 
+         在电影的名称之前显示,这是博主第几周推荐的电影，
+  -->
 <!-- class="container"应用全局样式 -->
 <view class="container">
         <text>本周推荐</text>
         <view class="movie" wx:for="{{weeklyMovieList}}">
                 <image class="movie-image" src="{{item.imagePath}}"></image>
                 <view class="movie-detail">
-                        <text>{{item.name}}</text>
+                        <text>第{{index+1}}周:{{item.name}}</text>
                         <text>点评:{{item.comment}}</text>
                         <!-- <text>{{count + score}}</text> -->
                         <!-- 条件表达式 -->
