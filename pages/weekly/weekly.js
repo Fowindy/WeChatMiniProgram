@@ -55,7 +55,10 @@ Page({
    * 2.新增实例代码f1的定义,读取内部状态变量值没有问题
    */
   f1: function (event) {
-    console.log(this.data.count)
+    // console.log(this.data.count)
+    //通过对内部状态直接赋值的方式,不能让对应的框架更新视图部分,本身内部被写入了,但是绑定了内部变量的视图部分并没有真正的更新,这样的方式很容易数据不一致
+    //在小程序中对内部状态数据进行更新，不能采用直接赋值写入的方式，
+    this.data.count = this.data.count + 1
   }
 })
 /**假如博主三周推荐的是这三部电影， */
