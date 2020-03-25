@@ -28,7 +28,8 @@
         <!-- <text>本周推荐</text> -->
         <!-- 显示swiper的面板指示 -->
         <!-- 增大每一页幻灯片的空间 -->
-        <swiper class="movie-swiper" indicator-dots='{{true}}'>
+        <!-- 页面左右两边留空 -->
+        <swiper class="movie-swiper" indicator-dots='{{true}}' previous-margin="50rpx" next-margin="50rpx">
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
                         <!-- 将图片和文字封装到view采用全局样式 -->
                         <!-- 全局中view元素的高度设成100vh大于swiper的90vh,因此将此view元素设成swiper的100% -->

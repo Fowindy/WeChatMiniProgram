@@ -1,6 +1,7 @@
 .container{
   /* 首先为view元素添加一个临时的背景色 */
-  background-color: #eee;
+  /* 为了看到效果将页面背景色改成白色 */
+  background-color: #fff;
   /* 希望页面的高度等同于页面可见区域的高度 */
   /* 100vh等价于页面是适可高度的100% */
   height: 100vh;
