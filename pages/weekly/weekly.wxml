@@ -37,7 +37,8 @@
         <!-- 显示swiper的面板指示 -->
         <!-- 增大每一页幻灯片的空间 -->
         <!-- 页面左右两边留空 -->
-        <swiper class="movie-swiper" indicator-dots='{{true}}' previous-margin="50rpx" next-margin="50rpx">
+        <!-- 在swiper中使用current属性设置首页幻灯片序号 -->
+        <swiper class="movie-swiper" indicator-dots='{{true}}' previous-margin="50rpx" next-margin="50rpx" current='1'>
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
                         <!-- 将图片和文字封装到view采用全局样式 -->
                         <!-- 全局中view元素的高度设成100vh大于swiper的90vh,因此将此view元素设成swiper的100% -->
