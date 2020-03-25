@@ -13,8 +13,8 @@
          在电影的名称之前显示,这是博主第几周推荐的电影，
   -->
 <!-- class="container"应用全局样式 -->
-<view class="container">
-        <text>本周推荐</text>
+<view class="">
+        <!-- <text>本周推荐</text> -->
         <view class="movie" wx:for="{{weeklyMovieList}}">
                 <image class="movie-image" src="{{item.imagePath}}"></image>
                 <view class="movie-detail">

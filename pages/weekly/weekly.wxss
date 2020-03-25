@@ -1,12 +1,13 @@
 .movie{
     display: flex;
-    flex-direction: row;
 }
 .movie-detail{
     display: flex;
     flex-direction: column;
+    /* 750-200 */
+    width: 550rpx;
 }
 .movie-image{
-    width: 180rpx;
-    height: 180rpx;
+    width: 200rpx;
+    height: 200rpx;
 }
