@@ -9,13 +9,15 @@
         第一种方式:手动增加，不推荐，
         第2种方法，在试图层提供循环的控制结构，
  -->
- <!-- 
+<!-- 
          在电影的名称之前显示,这是博主第几周推荐的电影，
   -->
-  <!-- 
+<!-- 
           3.5.使用swiper组件
           使用组件，从列表展示变为幻灯片轮播展示，
           幻灯片轮播的样式优化，
+
+          swiper初步实现滑动切换效果
    -->
 <!-- class="container"应用全局样式 -->
 <view class="">
@@ -30,10 +32,14 @@
                         <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
                         <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
                         <!-- 使用hidden属性渲染 -->
-                        <text hidden="{{!item.isHighlyRecommended}}"
-                                style="font-size:16px;color:red;">强烈推荐</text>
+                        <text hidden="{{!item.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>
                 </view>
         </view>
+        <swiper style="background:#eee;">
+                <swiper-item>123</swiper-item>
+                <swiper-item>456</swiper-item>
+                <swiper-item>789</swiper-item>
+        </swiper>
 </view>
 
 <!-- 3.2小程序运行环境和基本架构
