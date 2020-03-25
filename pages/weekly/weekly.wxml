@@ -81,6 +81,11 @@
                         </view>
                 </swiper-item>
         </swiper>
+        <!-- 
+              1.新增示例代码:讲解如何在逻辑层对内部数据进行读和写
+         -->
+         <text>{{count}}</text>
+         <button bindtap="f1">show count</button>
         <!-- swiper元素的默认高度为150px, image元素默认高度为240px,所以image相当于只显示了上面这一部分-->
         <!-- <swiper style="background:#eee;height:260px;">
                 <swiper-item>
