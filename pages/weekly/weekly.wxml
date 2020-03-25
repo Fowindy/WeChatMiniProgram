@@ -20,24 +20,30 @@
           swiper初步实现滑动切换效果
           swiper实现滑动切换图片的效果,但是文字没显示成功
    -->
+   <!-- 
+           要实现幻灯片的效果,需将view改成swiper-item并放置在swiper中
+    -->
 <!-- class="container"应用全局样式 -->
 <view class="">
         <!-- <text>本周推荐</text> -->
-        <view class="movie" wx:for="{{weeklyMovieList}}">
-                <image class="movie-image" src="{{item.imagePath}}"></image>
-                <view class="movie-detail">
-                        <text>第{{index+1}}周:{{item.name}}</text>
-                        <text>点评:{{item.comment}}</text>
-                        <!-- <text>{{count + score}}</text> -->
-                        <!-- 条件表达式 -->
-                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
-                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
-                        <!-- 使用hidden属性渲染 -->
-                        <text hidden="{{!item.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>
-                </view>
-        </view>
+        <swiper>
+                <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
+                        <image class="movie-image" src="{{item.imagePath}}"></image>
+                        <view class="movie-detail">
+                                <text>第{{index+1}}周:{{item.name}}</text>
+                                <text>点评:{{item.comment}}</text>
+                                <!-- <text>{{count + score}}</text> -->
+                                <!-- 条件表达式 -->
+                                <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+                                <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+                                <!-- 使用hidden属性渲染 -->
+                                <text hidden="{{!item.isHighlyRecommended}}"
+                                        style="font-size:16px;color:red;">强烈推荐</text>
+                        </view>
+                </swiper-item>
+        </swiper>
         <!-- swiper元素的默认高度为150px, image元素默认高度为240px,所以image相当于只显示了上面这一部分-->
-        <swiper style="background:#eee;height:260px;">
+        <!-- <swiper style="background:#eee;height:260px;">
                 <swiper-item>
                 <text>123</text>
                 <image src="/images/jf.jpg"></image>
@@ -50,7 +56,7 @@
                 <text>789</text>
                 <image src="/images/zgssbtl.jpg"></image>
                 </swiper-item>
-        </swiper>
+        </swiper> -->
 </view>
 
 <!-- 3.2小程序运行环境和基本架构
