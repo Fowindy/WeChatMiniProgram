@@ -31,6 +31,14 @@
         onShow，onReady
         onHide,onUnload
  -->
+<!-- 
+        3.7.更新数据
+        this.setData()方法
+        小程序并没有提供类似DOM的JS API来直接更新视图
+        this.setData()方法-更新数据并让框架自动更新相关视图
+        更新是增量式的
+        单项绑定
+ -->
 <!-- class="container"应用全局样式 -->
 <view class="">
         <!-- <text>本周推荐</text> -->
