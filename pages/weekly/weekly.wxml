@@ -33,17 +33,16 @@
                         <!-- 将图片和文字封装到view采用全局样式 -->
                         <view class="container">
                                 <image class="movie-image" src="{{item.imagePath}}"></image>
-                                <view class="movie-detail">
-                                        <text>第{{index+1}}周:{{item.name}}</text>
-                                        <text>点评:{{item.comment}}</text>
-                                        <!-- <text>{{count + score}}</text> -->
-                                        <!-- 条件表达式 -->
-                                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
-                                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
-                                        <!-- 使用hidden属性渲染 -->
-                                        <text hidden="{{!item.isHighlyRecommended}}"
-                                                style="font-size:16px;color:red;">强烈推荐</text>
-                                </view>
+                                <!-- 删除原来将文字封装一起的movie-detail样式,实现均匀分布 -->
+                                <text>第{{index+1}}周:{{item.name}}</text>
+                                <text>点评:{{item.comment}}</text>
+                                <!-- <text>{{count + score}}</text> -->
+                                <!-- 条件表达式 -->
+                                <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+                                <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+                                <!-- 使用hidden属性渲染 -->
+                                <text hidden="{{!item.isHighlyRecommended}}"
+                                        style="font-size:16px;color:red;">强烈推荐</text>
                         </view>
                 </swiper-item>
         </swiper>
