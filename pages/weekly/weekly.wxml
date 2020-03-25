@@ -18,6 +18,7 @@
           幻灯片轮播的样式优化，
 
           swiper初步实现滑动切换效果
+          swiper实现滑动切换图片的效果,但是文字没显示成功
    -->
 <!-- class="container"应用全局样式 -->
 <view class="">
@@ -36,9 +37,18 @@
                 </view>
         </view>
         <swiper style="background:#eee;">
-                <swiper-item>123</swiper-item>
-                <swiper-item>456</swiper-item>
-                <swiper-item>789</swiper-item>
+                <swiper-item>
+                <text>123</text>
+                <image src="/images/jf.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                <text>456</text>
+                <image src="/images/titanic.jpg"></image>
+                </swiper-item>
+                <swiper-item>
+                <text>789</text>
+                <image src="/images/zgssbtl.jpg"></image>
+                </swiper-item>
         </swiper>
 </view>
 
