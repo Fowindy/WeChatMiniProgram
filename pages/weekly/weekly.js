@@ -22,13 +22,15 @@ Page({
     }
   ],
     count:123,
-    score:61,
+    score:61
     //3.然后在页面的页面对象data中添加内部状态变量的定义并初始化为0
-    currentIndex:0
+    //此处的currentIndex定义可以省略掉,可以直接在this.setData方法中定义
+    // currentIndex:0
   },
   //4.使用onLoad方法对currentIndex真正初始化为数组最后一个序号
   onLoad:function (options){
     this.setData({
+      //此处定义即可
       currentIndex:this.data.weeklyMovieList.length-1
     })
   },
