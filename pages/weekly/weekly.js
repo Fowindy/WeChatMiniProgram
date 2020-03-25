@@ -63,7 +63,9 @@ Page({
     // this.data.count = this.data.count + 1
     //3.通过this.SetData的方式进行更新成功
     this.setData({
-      count:this.data.count+1
+      count:this.data.count+1,
+      //使用this.setData对局部数据进行更新
+      "weeklyMovieList[2].name":"这个杀手不太冷2"
     })
   }
 })
