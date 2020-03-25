@@ -20,7 +20,7 @@
           swiper初步实现滑动切换效果
           swiper实现滑动切换图片的效果,但是文字没显示成功
    -->
-   <!-- 
+<!-- 
            要实现幻灯片的效果,需将view改成swiper-item并放置在swiper中
     -->
 <!-- class="container"应用全局样式 -->
@@ -30,17 +30,20 @@
         <!-- 增大每一页幻灯片的空间 -->
         <swiper class="movie-swiper" indicator-dots='{{true}}'>
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
-                        <image class="movie-image" src="{{item.imagePath}}"></image>
-                        <view class="movie-detail">
-                                <text>第{{index+1}}周:{{item.name}}</text>
-                                <text>点评:{{item.comment}}</text>
-                                <!-- <text>{{count + score}}</text> -->
-                                <!-- 条件表达式 -->
-                                <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
-                                <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
-                                <!-- 使用hidden属性渲染 -->
-                                <text hidden="{{!item.isHighlyRecommended}}"
-                                        style="font-size:16px;color:red;">强烈推荐</text>
+                        <!-- 将图片和文字封装到view采用全局样式 -->
+                        <view class="container">
+                                <image class="movie-image" src="{{item.imagePath}}"></image>
+                                <view class="movie-detail">
+                                        <text>第{{index+1}}周:{{item.name}}</text>
+                                        <text>点评:{{item.comment}}</text>
+                                        <!-- <text>{{count + score}}</text> -->
+                                        <!-- 条件表达式 -->
+                                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+                                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+                                        <!-- 使用hidden属性渲染 -->
+                                        <text hidden="{{!item.isHighlyRecommended}}"
+                                                style="font-size:16px;color:red;">强烈推荐</text>
+                                </view>
                         </view>
                 </swiper-item>
         </swiper>
