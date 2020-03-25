@@ -1,24 +1,27 @@
 Page({
   data:{
+    //为每一个电影新增id
     weeklyMovieList:[
     {
       name:"教父",
       comment:"最精彩的剧本,最真实的黑帮电影",
       imagePath:"/images/jf.jpg",
-      isHighlyRecommended:true
-
+      isHighlyRecommended:true,
+      id:77,
     },
     {
       name:"泰坦尼克号",
       comment:"失去的才是永恒的",
       imagePath:"/images/titanic.jpg",
-      isHighlyRecommended:false
+      isHighlyRecommended:false,
+      id:88,
     },
     {
       name:"这个杀手不太冷",
       comment:"小萝莉与怪叔叔纯真浪漫的爱情故事",
       imagePath:"/images/zgssbtl.jpg",
-      isHighlyRecommended:false
+      isHighlyRecommended:false,
+      id:99,
     }
   ],
     count:123,
