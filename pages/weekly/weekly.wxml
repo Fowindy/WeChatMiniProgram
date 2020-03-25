@@ -4,22 +4,55 @@
         wx:for属性
  -->
 <!-- 将博主每一周推荐的电影全部都放在weekly上展示 -->
+<!-- 
+        如何对剩下的推荐做同样的渲染输出？
+        第一种方式:手动增加，不推荐，
+ -->
 <!-- class="container"应用全局样式 -->
 <view class="container">
-  <text>本周推荐</text>
-  <view class="movie">
-    <image class="movie-image" src="{{weeklyMovieList[0].imagePath}}"></image>
-    <view class="movie-detail">
-      <text>{{weeklyMovieList[0].name}}</text>
-      <text>点评:{{weeklyMovieList[0].comment}}</text>
-      <!-- <text>{{count + score}}</text> -->
-      <!-- 条件表达式 -->
-      <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
-      <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
-      <!-- 使用hidden属性渲染 -->
-      <text hidden="{{!weeklyMovieList[0].isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>
-    </view>
-  </view>
+        <text>本周推荐</text>
+        <view class="movie">
+                <image class="movie-image" src="{{weeklyMovieList[0].imagePath}}"></image>
+                <view class="movie-detail">
+                        <text>{{weeklyMovieList[0].name}}</text>
+                        <text>点评:{{weeklyMovieList[0].comment}}</text>
+                        <!-- <text>{{count + score}}</text> -->
+                        <!-- 条件表达式 -->
+                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+                        <!-- 使用hidden属性渲染 -->
+                        <text hidden="{{!weeklyMovieList[0].isHighlyRecommended}}"
+                                style="font-size:16px;color:red;">强烈推荐</text>
+                </view>
+        </view>
+        <view class="movie">
+                <image class="movie-image" src="{{weeklyMovieList[1].imagePath}}"></image>
+                <view class="movie-detail">
+                        <text>{{weeklyMovieList[1].name}}</text>
+                        <text>点评:{{weeklyMovieList[1].comment}}</text>
+                        <!-- <text>{{count + score}}</text> -->
+                        <!-- 条件表达式 -->
+                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+                        <!-- 使用hidden属性渲染 -->
+                        <text hidden="{{!weeklyMovieList[1].isHighlyRecommended}}"
+                                style="font-size:16px;color:red;">强烈推荐</text>
+                </view>
+        </view>
+        <view class="movie">
+                <image class="movie-image" src="{{weeklyMovieList[2].imagePath}}"></image>
+                <view class="movie-detail">
+                        <text>{{weeklyMovieList[2].name}}</text>
+                        <text>点评:{{weeklyMovieList[2].comment}}</text>
+                        <!-- <text>{{count + score}}</text> -->
+                        <!-- 条件表达式 -->
+                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+                        <!-- 使用hidden属性渲染 -->
+                        <text hidden="{{!weeklyMovieList[2].isHighlyRecommended}}"
+                                style="font-size:16px;color:red;">强烈推荐</text>
+                </view>
+        </view>
 </view>
 
 <!-- 3.2小程序运行环境和基本架构
