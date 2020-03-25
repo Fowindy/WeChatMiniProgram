@@ -25,6 +25,12 @@ Page({
     score:61,
     //3.然后在页面的页面对象data中添加内部状态变量的定义并初始化为0
     currentIndex:0
+  },
+  //4.使用onLoad方法对currentIndex真正初始化为数组最后一个序号
+  onLoad:function (options){
+    this.setData({
+      currentIndex:this.data.weeklyMovieList.length-1
+    })
   }
 })
 /**假如博主三周推荐的是这三部电影， */
