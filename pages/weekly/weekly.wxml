@@ -23,6 +23,14 @@
 <!-- 
            要实现幻灯片的效果,需将view改成swiper-item并放置在swiper中
     -->
+<!-- 
+        3.6.页面的生命周期函数
+        需求1，Swiper中如何默认切换到最后一页幻灯片，
+        需求2，非本周幻灯片页添加返回本周按钮，
+        页面状态数据如何初始化？onload(options)
+        onShow，onReady
+        onHide,onUnload
+ -->
 <!-- class="container"应用全局样式 -->
 <view class="">
         <!-- <text>本周推荐</text> -->
