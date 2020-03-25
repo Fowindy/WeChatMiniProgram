@@ -75,7 +75,8 @@
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
                         <!-- 将图片和文字封装到view采用全局样式 -->
                         <!-- 全局中view元素的高度设成100vh大于swiper的90vh,因此将此view元素设成swiper的100% -->
-                        <view class="container movie-card">
+                        <!-- 为movie-card元素绑定bindtap事件函数f2 -->
+                        <view class="container movie-card" bindtap="f2">
                                 <image class="movie-image" src="{{item.imagePath}}"></image>
                                 <!-- 删除原来将文字封装一起的movie-detail样式,实现均匀分布 -->
                                 <text>第{{index+1}}周:{{item.name}}</text>
