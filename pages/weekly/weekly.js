@@ -50,6 +50,12 @@ Page({
   },
   onUnload:function(){
 
+  },
+  /**
+   * 2.新增实例代码f1的定义,读取内部状态变量值没有问题
+   */
+  f1: function (event) {
+    console.log(this.data.count)
   }
 })
 /**假如博主三周推荐的是这三部电影， */

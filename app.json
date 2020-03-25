@@ -25,7 +25,7 @@
   "window": {
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "navigationBarTitleText": "小程序"
   },
   "sitemapLocation": "sitemap.json"
