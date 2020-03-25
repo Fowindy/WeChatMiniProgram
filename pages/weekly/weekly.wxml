@@ -26,7 +26,8 @@
 <!-- class="container"应用全局样式 -->
 <view class="">
         <!-- <text>本周推荐</text> -->
-        <swiper>
+        <!-- 显示swiper的面板指示 -->
+        <swiper indicator-dots='{{true}}'>
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
                         <image class="movie-image" src="{{item.imagePath}}"></image>
                         <view class="movie-detail">
