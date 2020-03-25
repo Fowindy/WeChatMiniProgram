@@ -3,23 +3,25 @@
         列表渲染，重复的渲染生成组件，
         wx:for属性
  -->
+<!-- 将博主每一周推荐的电影全部都放在weekly上展示 -->
 <!-- class="container"应用全局样式 -->
 <view class="container">
-        <text>本周推荐</text>
-        <view class="movie">
-                <image class="movie-image" src="{{thisWeekMovie.imagePath}}"></image>
-                <view class="movie-detail">
-                        <text>{{thisWeekMovie.name}}</text>
-                        <text>点评:{{thisWeekMovie.comment}}</text>
-                        <!-- <text>{{count + score}}</text> -->
-                        <!-- 条件表达式 -->
-                        <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
-                        <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
-                        <!-- 使用hidden属性渲染 -->
-                        <text hidden="{{!thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>  
-                </view>
-        </view>
+  <text>本周推荐</text>
+  <view class="movie">
+    <image class="movie-image" src="{{weeklyMovieList[0].imagePath}}"></image>
+    <view class="movie-detail">
+      <text>{{weeklyMovieList[0].name}}</text>
+      <text>点评:{{weeklyMovieList[0].comment}}</text>
+      <!-- <text>{{count + score}}</text> -->
+      <!-- 条件表达式 -->
+      <!-- <text>{{(score>=60)?"及格":"不及格"}}</text> -->
+      <!-- <text wx:if="{{thisWeekMovie.isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>    -->
+      <!-- 使用hidden属性渲染 -->
+      <text hidden="{{!weeklyMovieList[0].isHighlyRecommended}}" style="font-size:16px;color:red;">强烈推荐</text>
+    </view>
+  </view>
 </view>
+
 <!-- 3.2小程序运行环境和基本架构
         运行环境:
         每个小程序都是运行在他所在的微信客户端上的，
@@ -56,5 +58,3 @@
         hidden初始化开销会大一些
 
 -->
-
-
