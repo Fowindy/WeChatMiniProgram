@@ -42,8 +42,9 @@
                 需求1，Swiper中如何默认切换到最后一页幻灯片，
                 将current值绑定到weeklyMovieList数组长度-1上,即为最后一张幻灯片(最新本周)
          -->
+         <!-- 2.将current值的绑定改为新的内部状态变量 -->
         <swiper class="movie-swiper" indicator-dots='{{true}}' previous-margin="50rpx" next-margin="50rpx"
-                current='{{weeklyMovieList.length-1}}'>
+                current='{{currentIndex}}'>
                 <swiper-item class="movie" wx:for="{{weeklyMovieList}}">
                         <!-- 将图片和文字封装到view采用全局样式 -->
                         <!-- 全局中view元素的高度设成100vh大于swiper的90vh,因此将此view元素设成swiper的100% -->
@@ -66,6 +67,7 @@
                                 -->
                                 <!-- 
                                         需求2，非本周幻灯片页添加返回本周按钮
+                                        1.需要给按钮绑定一个触发事件
                                 -->
                                 <text bingtap="f0" wx:if="{{index < (weeklyMovieList.length-1)}}" class="return-button">返回本周</text>
                         </view>
