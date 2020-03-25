@@ -96,7 +96,13 @@
          -->
          <text>{{count}}</text>
          <!-- 3.希望每次点击时对内部状态的变量值加1 -->
-         <button bindtap="f1">+1</button>
+         <!-- 
+                 2.catchtap和bindtap的区别:
+                 bindtap绑定触发的tap事件就会向上冒泡传递给父元素,当前元素上并不会阻挡自己的冒泡事件向上冒泡传递;button元素被点击后会触发tap事件,对应的f1会被调用执行,同时冒泡事件会向上传递给view元素,view元素会重新渲染;
+                 catchtap绑定,button元素会阻止自己触发的冒泡事件向上传递,button元素被点击之后,自己触发tap事件,自己会调用自己的f1处的函数来处理,但事件不会向上冒泡,也就是父元素view元素不会触发tap事件,所以view元素本身不会对这个事件作进一步的处理;
+                 catchtap多用于在当前元素进行处理事件,并不需要当前元素的父元素或者祖先元素作进一步的处理;
+        -->
+         <button catchtap="f1">+1</button>
         <!-- swiper元素的默认高度为150px, image元素默认高度为240px,所以image相当于只显示了上面这一部分-->
         <!-- <swiper style="background:#eee;height:260px;">
                 <swiper-item>
