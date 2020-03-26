@@ -81,7 +81,7 @@ Page({
   //f2事件函数:实现从当前也跳转到目标详情页
   f2:function (event) {
     wx.navigateTo({
-      url: '/pages/detail/detail',
+      url: '/pages/detail/detail?id=77',
     })
   }
 })
