@@ -32,7 +32,7 @@
    detail页具体展示简单实现
   -->
   <view class="container">
-    <image src="{{movie.images.small}}"></image>
+    <image class="detail-image" src="{{movie.images.small}}"></image>
     <text style="font-weight: bold;font-size: 50rpx;">{{movie.title}}</text>
     <text>想看:{{movie.wish_count}}</text>
     <text>看过:{{movie.collect_count}}</text>

@@ -1,0 +1,5 @@
+/* 增加image的样式 */
+.detail-image{
+    width: 300rpx;
+    height:300rpx;
+}
