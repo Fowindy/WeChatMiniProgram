@@ -107,9 +107,9 @@
                                         需求2，非本周幻灯片页添加返回本周按钮
                                         1.需要给按钮绑定一个触发事件
                                 -->
-                                <text bindtap="f0" wx:if="{{index < (weeklyMovieList.length-1)}}"
-                                        class="return-button">返回本周</text>
                         </view>
+                        <text bindtap="f0" wx:if="{{index < (weeklyMovieList.length-1)}}"
+                                class="return-button">返回本周</text>
                 </swiper-item>
         </swiper>
         <!-- 
