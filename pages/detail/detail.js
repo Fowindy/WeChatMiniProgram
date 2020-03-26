@@ -28,6 +28,10 @@ Page({
                 //打印res结果返回不存在request合法域名列表
                 //[小程序后台-开发-开发设置-服务器域名]中登记域名
                 console.log(res)
+                //通过this.setData的调用将接收到的电影的详情对象保存到movie中
+                this.setData({
+                    movie:res.data
+                })
                 /**
                  * success回调函数接收到的res对象包含response中的关键数据:
                  * 1.data属性:抽取了response body中的文本然后转化成的字符串
