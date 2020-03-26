@@ -39,6 +39,8 @@ Page({
                         //报错:setData不是success的属性,this指针指向的是wx.request对象
                         //如何能够在success中访问到页面的对象
                     })
+                    //加载完成隐藏加载动画
+                    wx.hideNavigationBarLoading()
                 }
                 /**
                  * success回调函数接收到的res对象包含response中的关键数据:
@@ -59,6 +61,8 @@ Page({
 
             }
         })
+        //在数据加载的时候有白色的一段,使用导航加载动画来提示数据加载中
+        wx.showNavigationBarLoading()
         console.log("ok")
     }
 })
