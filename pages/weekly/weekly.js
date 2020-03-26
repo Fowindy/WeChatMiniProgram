@@ -88,6 +88,7 @@ Page({
     wx.navigateTo({
       //如何在这个事件处理函数中找到此次页面跳转，需要指定的ID取值
       //实现点击跳转显示对应电影的详细信息
+      //希望detail页被打开时,自身能够知道在对应的完整的url中，被指定的ID参数是多少？
       url: '/pages/detail/detail?id=' + movieId,
     })
   }
