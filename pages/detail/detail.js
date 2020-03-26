@@ -20,6 +20,16 @@ Page({
             //header参数对请求的header字段进行设置_原数据
             header: {
 
+            },
+            //当小程序接收到服务器返回的response后该如何处理_通过对应回调函数的指令完成的
+            success: function (res) {
+                
+            },
+            fail: function () {
+
+            },
+            complete: function () {
+
             }
         })
     }
