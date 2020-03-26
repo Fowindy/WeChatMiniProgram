@@ -92,6 +92,13 @@ Page({
       //希望detail页被打开时,自身能够知道在对应的完整的url中，被指定的ID参数是多少？
       url: '/pages/detail/detail?id=' + movieId,
     })
+  },
+  //添加onShareAppMessage方法的定义实现转发按钮_默认转发生成应用消息上标题为该小程序名称
+  onShareAppMessage:function() {
+    //定制"每周推荐"标题
+    return {
+      title:"每周推荐"
+    }
   }
 })
 /**假如博主三周推荐的是这三部电影， */
