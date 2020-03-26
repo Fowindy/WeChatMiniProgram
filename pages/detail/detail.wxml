@@ -1,7 +1,6 @@
 <!-- 
     新增detail页
  -->
-<text>detail page for movie id = {{mid}}</text>
 <!-- 希望显示对应电影的详细信息 -->
 <!-- 
      4.2.实现电影详情页面的基本框架
@@ -29,3 +28,14 @@
           解决办法
       detail页具体展示    
  -->
+ <!-- 
+   detail页具体展示简单实现
+  -->
+  <view class="container">
+    <image src="{{movie.images.small}}"></image>
+    <text style="font-weight: bold;font-size: 50rpx;">{{movie.title}}</text>
+    <text>想看:{{movie.wish_count}}</text>
+    <text>看过:{{movie.collect_count}}</text>
+    <text>评分:{{movie.rating.average}}</text>
+    <text>简介:{{movie.summary}}</text>
+  </view>
