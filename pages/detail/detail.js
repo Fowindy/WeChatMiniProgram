@@ -9,6 +9,8 @@ Page({
         })
         //演示:添加wx.request方法调用
         //wx.request方法的调用为异步调用,每一次调用request方法后不会阻塞,会立马返回;返回后执行对应的语句或者逻辑
+        //先在外面对this对象保存为that
+        var that = this
         wx.request({
             //来指定请求的网址
             url: 'https://api.douban.com/v2/movie/subject/'+option.id+'?apikey=0df993c66c0c636e29ecbb5344252a4a&qq-pf-to=pcqq.group',
@@ -29,8 +31,11 @@ Page({
                 //[小程序后台-开发-开发设置-服务器域名]中登记域名
                 console.log(res)
                 //通过this.setData的调用将接收到的电影的详情对象保存到movie中
-                this.setData({
+                //再调用保存的that对象
+                that.setData({
                     movie:res.data
+                    //报错:setData不是success的属性,this指针指向的是wx.request对象
+                    //如何能够在success中访问到页面的对象
                 })
                 /**
                  * success回调函数接收到的res对象包含response中的关键数据:
