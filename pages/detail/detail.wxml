@@ -3,3 +3,9 @@
  -->
  <text>detail page</text>
  <!-- 希望显示对应电影的详细信息 -->
+ <!-- 
+     4.2.实现电影详情页面的基本框架
+     页面初始化获取query参数:onLoad(options)
+     detail页的初始代码和基本流程
+     上一节遗留问题:回复weekly页上每个"返回本周"按钮的点击行为(catchtap应用)
+  -->
