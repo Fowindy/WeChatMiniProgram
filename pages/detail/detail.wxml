@@ -1,7 +1,7 @@
 <!-- 
     新增detail页
  -->
- <text>detail page</text>
+ <text>detail page for movie id = {{mid}}</text>
  <!-- 希望显示对应电影的详细信息 -->
  <!-- 
      4.2.实现电影详情页面的基本框架
@@ -9,4 +9,14 @@
      detail页的初始代码和基本流程
 
      1.上一节遗留问题:回复weekly页上每个"返回本周"按钮的点击行为(catchtap应用)
+     2.如何在页面上显示出目标电影的更多详情信息，
   -->
+  <!-- 
+      4.3.发起请求API-wx.request
+      小程序网络相关API
+        wx.request,wx.uploadFile,wx.downloadFile,WebSocket相关API
+      wx.request发起HTTP request,调用Server端一个API来获取数据或者操作数据
+        基本参数:发起一个什么样的请求
+        回调函数:收到request之后或者调用失败时如何处理
+
+   -->
