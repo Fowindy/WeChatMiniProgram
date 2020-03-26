@@ -39,6 +39,10 @@ Page({
                         //报错:setData不是success的属性,this指针指向的是wx.request对象
                         //如何能够在success中访问到页面的对象
                     })
+                    //当数据加载完成后,动态将标题由电影详情页改为当前电影的评分+电影名
+                    wx.setNavigationBarTitle({
+                      title: res.data.rating.average + '分:' + res.data.title,
+                    })
                     //加载完成隐藏加载动画
                     wx.hideNavigationBarLoading()
                 }
