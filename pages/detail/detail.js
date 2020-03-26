@@ -19,8 +19,9 @@ Page({
             //     x: 1, y: 2
             // },
             //header参数对请求的header字段进行设置_原数据
+            //此时会报400_Bad Request,需要设置header的Content-Type参数为json,获取数据OK
             header: {
-
+                "Content-Type":"json"
             },
             //当小程序接收到服务器返回的response后该如何处理_通过对应回调函数的指令完成的
             success: function (res) {
