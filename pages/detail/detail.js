@@ -68,5 +68,11 @@ Page({
         //在数据加载的时候有白色的一段,使用导航加载动画来提示数据加载中
         wx.showNavigationBarLoading()
         console.log("ok")
+    },
+    //添加onShareAppMessage方法的定义实现detail转发按钮
+    onShareAppMessage:function(){
+        return{
+           title:"向你推荐电影:"+ this.data.movie.title 
+        }
     }
 })
