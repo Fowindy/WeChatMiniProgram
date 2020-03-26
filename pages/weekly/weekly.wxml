@@ -79,6 +79,8 @@
                         <view class="container movie-card" bindtap="f2">
                                 <image class="movie-image" src="{{item.imagePath}}"></image>
                                 <!-- 删除原来将文字封装一起的movie-detail样式,实现均匀分布 -->
+                                <!-- 在视图层显示电影ID -->
+                                <text>{{item.id}}</text>
                                 <text>第{{index+1}}周:{{item.name}}</text>
                                 <text>点评:{{item.comment}}</text>
                                 <!-- <text>{{count + score}}</text> -->

@@ -81,6 +81,7 @@ Page({
   //f2事件函数:实现从当前也跳转到目标详情页
   f2:function (event) {
     wx.navigateTo({
+      //如何在这个事件处理函数中找到此次页面跳转，需要指定的ID取值
       url: '/pages/detail/detail?id=77',
     })
   }
