@@ -11,13 +11,13 @@ Page({
         //wx.request方法的调用为异步调用,每一次调用request方法后不会阻塞,会立马返回;返回后执行对应的语句或者逻辑
         wx.request({
             //来指定请求的网址
-            url: 'https://api.douban.com/a/b.jsp',
+            url: 'https://api.douban.com/v2/movie/subject/'+option.id+'?apikey=0df993c66c0c636e29ecbb5344252a4a&qq-pf-to=pcqq.group',
             //指定请求使用何种方法
-            method: "GET",
+            // method: "GET",//默认使用GET方法
             //在请求中捎带数据参数传输给Server
-            data: {
-                x: 1, y: 2
-            },
+            // data: {
+            //     x: 1, y: 2
+            // },
             //header参数对请求的header字段进行设置_原数据
             header: {
 
