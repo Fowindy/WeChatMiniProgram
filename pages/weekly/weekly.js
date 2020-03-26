@@ -1,46 +1,46 @@
 Page({
-  data:{
+  data: {
     //为每一个电影新增id
-    weeklyMovieList:[
-    {
-      name:"教父",
-      comment:"最精彩的剧本,最真实的黑帮电影",
-      imagePath:"/images/jf.jpg",
-      isHighlyRecommended:true,
-      id:77,
-    },
-    {
-      name:"泰坦尼克号",
-      comment:"失去的才是永恒的",
-      imagePath:"/images/titanic.jpg",
-      isHighlyRecommended:false,
-      id:88,
-    },
-    {
-      name:"这个杀手不太冷",
-      comment:"小萝莉与怪叔叔纯真浪漫的爱情故事",
-      imagePath:"/images/zgssbtl.jpg",
-      isHighlyRecommended:false,
-      id:99,
-    }
-  ],
-    count:123,
-    score:61
+    weeklyMovieList: [
+      {
+        name: "教父",
+        comment: "最精彩的剧本,最真实的黑帮电影",
+        imagePath: "/images/jf.jpg",
+        isHighlyRecommended: true,
+        id: 77,
+      },
+      {
+        name: "泰坦尼克号",
+        comment: "失去的才是永恒的",
+        imagePath: "/images/titanic.jpg",
+        isHighlyRecommended: false,
+        id: 88,
+      },
+      {
+        name: "这个杀手不太冷",
+        comment: "小萝莉与怪叔叔纯真浪漫的爱情故事",
+        imagePath: "/images/zgssbtl.jpg",
+        isHighlyRecommended: false,
+        id: 99,
+      }
+    ],
+    count: 123,
+    score: 61
     //3.然后在页面的页面对象data中添加内部状态变量的定义并初始化为0
     //此处的currentIndex定义可以省略掉,可以直接在this.setData方法中定义
     // currentIndex:0
   },
   //4.使用onLoad方法对currentIndex真正初始化为数组最后一个序号
-  onLoad:function (options){
+  onLoad: function (options) {
     this.setData({
       //此处定义即可
-      currentIndex:this.data.weeklyMovieList.length-1
+      currentIndex: this.data.weeklyMovieList.length - 1
     })
   },
   //返回每周触发事件函数f0完成
-  f0:function(event) {
+  f0: function (event) {
     this.setData({
-      currentIndex:this.data.weeklyMovieList.length-1
+      currentIndex: this.data.weeklyMovieList.length - 1
     })
   },
   /**
@@ -73,21 +73,22 @@ Page({
     // this.data.count = this.data.count + 1
     //3.通过this.SetData的方式进行更新成功
     this.setData({
-      count:this.data.count+1,
+      count: this.data.count + 1,
       //使用this.setData对局部数据进行更新
-      "weeklyMovieList[2].name":"这个杀手不太冷2"
+      "weeklyMovieList[2].name": "这个杀手不太冷2"
     })
   },
   //f2事件函数:实现从当前也跳转到目标详情页
-  f2:function (event) {
+  f2: function (event) {
     //保存获取到的movieId
     var movieId = event.currentTarget.dataset.movieId
-    console.log(movieId),
+    // console.log(movieId),
     //打印event.currentTarget
     // console.log(event.currentTarget),
     wx.navigateTo({
       //如何在这个事件处理函数中找到此次页面跳转，需要指定的ID取值
-      url: '/pages/detail/detail?id=77',
+      //实现点击跳转显示对应电影的详细信息
+      url: '/pages/detail/detail?id=' + movieId,
     })
   }
 })
