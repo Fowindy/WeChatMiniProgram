@@ -8,6 +8,7 @@ Page({
             mid: option.id
         })
         //演示:添加wx.request方法调用
+        //wx.request方法的调用为异步调用,每一次调用request方法后不会阻塞,会立马返回;返回后执行对应的语句或者逻辑
         wx.request({
             //来指定请求的网址
             url: 'https://api.douban.com/a/b.jsp',
@@ -45,5 +46,6 @@ Page({
 
             }
         })
+        console.log("ok")
     }
 })
