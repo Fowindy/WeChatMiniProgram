@@ -38,6 +38,18 @@
         wx.setNavigationBarTitle()
           动态设置页面的标题
   -->
+<!-- 
+  4.6.页面事件处理函数
+      页面事件处理函数与自定义页面转发
+      页面世界处理函数，
+        onPullDownRefresh_页面下拉刷新时被调用
+        onReachBottom_上划触底时被调用
+        onPageScroll_页面滑动时被调用
+        onShareAppMessage_分享时被调用
+      需求:
+          给weekly定义转发title:"每周推荐"，
+          给detail页自定义转发title:"向你推荐:{{当前电影的名称}}"
+ -->
  <!-- 
    detail页具体展示简单实现
   -->
