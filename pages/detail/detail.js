@@ -13,7 +13,7 @@ Page({
         var that = this
         wx.request({
             //来指定请求的网址
-            url: 'https://api.douban.com/v2/movie/subject/'+option.id+'?apikey=0df993c66c0c636e29ecbb5344252a4a&qq-pf-to=pcqq.group',
+            url: 'https://api.douban.com/v2/movie/subject/' + option.id + '?apikey=0df993c66c0c636e29ecbb5344252a4a&qq-pf-to=pcqq.group',
             //指定请求使用何种方法
             // method: "GET",//默认使用GET方法
             //在请求中捎带数据参数传输给Server
@@ -23,7 +23,7 @@ Page({
             //header参数对请求的header字段进行设置_原数据
             //此时会报400_Bad Request,需要设置header的Content-Type参数为json,获取数据OK
             header: {
-                "Content-Type":"json"
+                "Content-Type": "json"
             },
             //当小程序接收到服务器返回的response后该如何处理_通过对应回调函数的指令完成的
             success: function (res) {
@@ -32,11 +32,14 @@ Page({
                 console.log(res)
                 //通过this.setData的调用将接收到的电影的详情对象保存到movie中
                 //再调用保存的that对象
-                that.setData({
-                    movie:res.data
-                    //报错:setData不是success的属性,this指针指向的是wx.request对象
-                    //如何能够在success中访问到页面的对象
-                })
+                //过滤掉电影查找出错
+                if (res.statusCode == 200) {
+                    that.setData({
+                        movie: res.data
+                        //报错:setData不是success的属性,this指针指向的是wx.request对象
+                        //如何能够在success中访问到页面的对象
+                    })
+                }
                 /**
                  * success回调函数接收到的res对象包含response中的关键数据:
                  * 1.data属性:抽取了response body中的文本然后转化成的字符串
