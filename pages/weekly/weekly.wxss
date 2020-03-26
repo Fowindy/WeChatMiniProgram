@@ -34,7 +34,7 @@
   /* 按钮变成绝对定位 */
   position: absolute;
   /* 设定位置 */
-  right: 60rpx;
+  right: 10rpx;
   top: 10rpx;
   font-size: 26rpx;
   font-style: italic;
