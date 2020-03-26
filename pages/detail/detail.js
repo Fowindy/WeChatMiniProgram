@@ -10,7 +10,7 @@ Page({
         //演示:添加wx.request方法调用
         wx.request({
             //来指定请求的网址
-            url: 'https://api.douban.com/v2/movie',
+            url: 'https://api.douban.com/a/b.jsp',
             //指定请求使用何种方法
             method: "GET",
             //在请求中捎带数据参数传输给Server
@@ -26,6 +26,17 @@ Page({
                 //打印res结果返回不存在request合法域名列表
                 //[小程序后台-开发-开发设置-服务器域名]中登记域名
                 console.log(res)
+                /**
+                 * success回调函数接收到的res对象包含response中的关键数据:
+                 * 1.data属性:抽取了response body中的文本然后转化成的字符串
+                 *   因为header中返回的Content-Type是text的html,则返回的是字符串包含在
+                 *   data属性中;如果Content-Type返回的是AplicationJson格式,打他属性中
+                 *   则包含的是Json文本;小程序运行环境会进一步对Json文件进行解析为对应的
+                 *   JavaScript的值,保存在data属性中;
+                 * 2.header属性:把收到的response中所有的header字段以及对应的取值抽取出来封
+                 *   装为一个对应的JavaScript对象;
+                 * 3.statusCode属性:直接抽取response的状态码,然后进行保存;
+                 */
             },
             fail: function () {
 
