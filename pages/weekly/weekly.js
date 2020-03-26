@@ -9,19 +9,20 @@ Page({
         isHighlyRecommended: true,
         id: 1291841,
       },
+      //将其他电影的id修改正确
       {
         name: "泰坦尼克号",
         comment: "失去的才是永恒的",
         imagePath: "/images/titanic.jpg",
         isHighlyRecommended: false,
-        id: 88,
+        id: 1292722,
       },
       {
         name: "这个杀手不太冷",
         comment: "小萝莉与怪叔叔纯真浪漫的爱情故事",
         imagePath: "/images/zgssbtl.jpg",
         isHighlyRecommended: false,
-        id: 99,
+        id: 1295644,
       }
     ],
     count: 123,
