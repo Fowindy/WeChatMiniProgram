@@ -1,5 +1,4 @@
 {
-  "comment":"全局配置页中对新增的detail页的路径进行登记配置",
   "pages": [
     "pages/about/about"
     ,
