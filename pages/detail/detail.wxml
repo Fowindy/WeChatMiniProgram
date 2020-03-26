@@ -29,6 +29,16 @@
       detail页具体展示    
  -->
  <!-- 
+   4.5.动态设置导航栏
+      动态设置导航栏loading状态和标题
+        wx.showNavigationBarLoading()
+          在页面导航栏标题的左方显示加载的动画,主要提示当前用户数据还在加载中
+        wx.hideNavigationBarLoading()
+          隐藏掉加载动画
+        wx.setNavigationBarTitle()
+          动态设置页面的标题
+  -->
+ <!-- 
    detail页具体展示简单实现
   -->
   <view class="container">
